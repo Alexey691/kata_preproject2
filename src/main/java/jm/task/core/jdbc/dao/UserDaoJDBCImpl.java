@@ -79,6 +79,7 @@ public class UserDaoJDBCImpl implements UserDao {
                         rs.getString("lastname"),
                         rs.getByte("age")));
             }
+            connection.commit();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
